@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sabor a México</title>
+  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/6/6c/Muñeca_Lele.jpg" type="image/jpeg">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Great+Vibes&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    body {
+      background: #000 url('https://cdn.pixabay.com/photo/2017/11/03/21/53/mexican-2919891_1280.jpg') repeat;
+      color: #fff;
+    }
+
+    header {
+      background: #000 url('https://cdn.pixabay.com/photo/2017/01/31/15/09/mexico-2025123_1280.jpg') center/cover no-repeat;
+      color: white;
+      padding: 7rem 1rem 4rem;
+      text-align: center;
+      position: relative;
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 0;
+    }
+
+    header h1 {
+      position: relative;
+      font-size: 4.5rem;
+      font-family: 'Great Vibes', cursive;
+      color: #fdd835;
+      text-shadow: 3px 3px 10px #ff4081;
+      z-index: 1;
+    }
+
+    header p {
+      position: relative;
+      font-size: 1.8rem;
+      font-style: italic;
+      color: #ffccbc;
+      z-index: 1;
+    }
+
+    .container {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .paquete {
+      background: #fff3e0;
+      border-radius: 1rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+      padding: 2rem;
+      border: 6px double #ff5722;
+      color: #4e342e;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .paquete:hover {
+      transform: scale(1.02);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.6);
+    }
+
+    .paquete h2 {
+      font-size: 2.2rem;
+      font-family: 'Playfair Display', serif;
+      color: #bf360c;
+      margin-bottom: 1rem;
+    }
+
+    .contenido {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    .contenido ul {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+    }
+
+    .precio {
+      font-size: 1.6rem;
+      color: #2e7d32;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #d84315;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 3rem;
+      font-size: 1.2rem;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .muñeca {
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .muñeca img {
+      width: 100px;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 3rem;
+      }
+    }
+
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 100;
+      width: 60px;
+      height: 60px;
+      background-color: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+
+    .whatsapp-button img {
+      width: 30px;
+      height: 30px;
+    }
+
+    .galeria {
+  padding: 2rem;
+  background: #fff8f0;
+  color: #3e2723;
+  text-align: center;
+  border-top: 4px solid #ff7043;
+  border-bottom: 4px solid #ff7043;
+}
+
+.galeria h2 {
+  font-size: 2.5rem;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 1.5rem;
+  color: #bf360c;
+}
+
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.media-grid img,
+.media-grid video {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+.imagen-responsiva {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto 1rem;
+}
+
+.imagen-responsiva img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Sabor a México</h1>
+    <p>La mejor comida para tus eventos</p>
+  </header>
+
+  <div class="muñeca">
+    <img src="muñeca.png" alt="Muñeca Tradicional">
+  </div>
+
+  <main class="container">
+    <section class="paquete">
+      <h2>Paquete 1</h2>
+      <div class="contenido">
+        <ul>
+          <li>Gorditas</li>
+          <li>Enchiladas</li>
+          <li>Pambazos</li>
+        </ul>
+        <p class="precio">Precio para 50 personas: $4,500 MXN<br></p>
+      </div>
+    </section>
+
+    <section class="paquete">
+      <h2>Paquete 2</h2>
+      <div class="contenido">
+        <ul>
+          <li>Tacos de Bisteck</li>
+          <li>Tacos de Chorizo</li>
+          <li>Tacos al Pastor</li>
+        </ul>
+        <p class="precio">Precio para 50 personas: $5000 MXN<br></p>
+      </div>
+    </section>
+
+    <section class="paquete">
+      <h2>Paquete 3</h2>
+      <div class="contenido">
+        <ul>
+          <li>Sopes</li>
+          <li>Huaraches</li>
+          <li>Picadillo</li>
+          <li>Bisteck</li>
+        </ul>
+        <p class="precio">Precio para 50 personas: $5000 MXN<br></p>
+      </div>
+    </section>
+
+    <section class="paquete">
+      <h2>Paquete 4</h2>
+      <div class="contenido">
+        <ul>
+          <li>Quecas de Bisteck</li>
+          <li>Quecas de Picadillo</li>
+          <li>Quecas de Deshebrada</li>
+        </ul>
+        <p class="precio">Precio para 50 personas: $5000 MXN<br></p>
+      </div>
+    </section>
+     <section class="paquete">
+      <h2>Paquete 5</h2>
+      <div class="contenido">
+        <ul>
+          <li>Gorditas de Migajas y Queso</li>
+        </ul>
+        <p class="precio">Precio para 50 personas: $5000 MXN<br></p>
+      </div>
+    </section>
+   <section class="paquete">
+  <h2>Vitroleros de Aguas</h2>
+  <div class="contenido">
+    <div class="imagen-responsiva">
+      <img src="C5.jpeg" alt="Vitroleros">
+    </div>
+    <p class="precio">Frutas: Fresas, Horchata, Vainilla: $300 MXN<br></p>
+    <p class="precio">Frutas 2: Piña, Limón, Jamaica, Tamarindo, Sandía, Melón: $200 MXN<br></p>
+  </div>
+</section>
+
+
+
+    <section class="galeria">
+  <h2>Galería de Paquetes</h2>
+  <div class="media-grid">
+    <img src="C1.jpeg" alt="Paquete 1 presentación">
+    <img src="C2.jpeg" alt="Paquete 2 presentación">
+    <video controls src="C3.mp4"></video>
+    <video controls src="C4.mp4"></video>
+  </div>
+</section>
+  </main>
+
+  <footer>
+    <p>Contáctanos: Isabel <a href="https://wa.me/524131194818">📱 413-119-48-18</a></p>
+    <p>&copy; 2025 Sabor a México | Todos los derechos reservados</p>
+  </footer>
+
+  <a class="whatsapp-button" href="https://wa.me/524131194818" target="_blank" rel="noopener">
+    <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp">
+  </a>
+</body>
+</html>
+
+
